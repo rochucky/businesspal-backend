@@ -3,12 +3,12 @@ const salt = '$2b$10$XsBAyM.YEWfZZ39V90Idk.';
 
 const connect = () => {
   const mysql = require('mysql');
-  
+  // b3795aa3531f99:f164aa41@us-cdbr-east-04.cleardb.com/heroku_01a4f15b435726c
   var con = mysql.createConnection({
-    host: "localhost",
-    user: "root",
-    password: "",
-    database: "businesspal"
+    host: "us-cdbr-east-04.cleardb.com",
+    user: "b3795aa3531f99",
+    password: "f164aa41",
+    database: "heroku_01a4f15b435726c"
 
   });
   

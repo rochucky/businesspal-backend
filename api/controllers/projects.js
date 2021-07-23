@@ -4,11 +4,13 @@ module.exports = () => {
   controller.projects = async (req, res) => {
     const db = require('../../db');
     let results = await db.query('select * from projects');
+    db.close();
     res.status(200).json(results);
   };
   controller.count = async (req, res) => {
     const db = require('../../db');
     let results = await db.query('select count(id) as count from projects');
+    db.close();
     res.status(200).json(results);
   };
 
@@ -31,6 +33,7 @@ module.exports = () => {
     inner join projects p on i.id = p.idea_id and p.user_id = ${userId}
     inner join steps s on s.id = p.id;
     `);
+    db.close();
     res.status(200).json(results);
   }
 
@@ -39,6 +42,7 @@ module.exports = () => {
 
     const db = require('../../db');
     await db.query(`insert into projects values ('', ${idea}, ${user}, now())`);
+    db.close();
     res.status(200).json({message: 'inserted!'});
   }
   
@@ -51,6 +55,7 @@ module.exports = () => {
 
     const db = require('../../db');
     await db.query(`update projects set ${setStatement.join(', ')} where id = ${id}`);
+    db.close();
     res.status(200).json({message: 'updated!'});
   }
 
@@ -59,6 +64,7 @@ module.exports = () => {
 
     const db = require('../../db');
     await db.query(`delete from projects where id = ${id}`);
+    db.close();
     res.status(200).json({message: 'deleted!'});
   }
 

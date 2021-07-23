@@ -1,0 +1,43 @@
+{
+  "files": {
+    "main.css": "/static/css/main.705e26c4.chunk.css",
+    "main.js": "/static/js/main.b6ca30c3.chunk.js",
+    "main.js.map": "/static/js/main.b6ca30c3.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.2f150c51.js",
+    "runtime-main.js.map": "/static/js/runtime-main.2f150c51.js.map",
+    "static/css/2.63596555.chunk.css": "/static/css/2.63596555.chunk.css",
+    "static/js/2.09135e4c.chunk.js": "/static/js/2.09135e4c.chunk.js",
+    "static/js/2.09135e4c.chunk.js.map": "/static/js/2.09135e4c.chunk.js.map",
+    "static/js/3.be7e6704.chunk.js": "/static/js/3.be7e6704.chunk.js",
+    "static/js/3.be7e6704.chunk.js.map": "/static/js/3.be7e6704.chunk.js.map",
+    "index.html": "/index.html",
+    "static/css/2.63596555.chunk.css.map": "/static/css/2.63596555.chunk.css.map",
+    "static/css/main.705e26c4.chunk.css.map": "/static/css/main.705e26c4.chunk.css.map",
+    "static/js/2.09135e4c.chunk.js.LICENSE.txt": "/static/js/2.09135e4c.chunk.js.LICENSE.txt",
+    "static/media/App.css": "/static/media/Montserrat-ThinItalic.3096cb47.ttf",
+    "static/media/arrow-down.6ab77539.svg": "/static/media/arrow-down.6ab77539.svg",
+    "static/media/arrow-upward.520ab45f.svg": "/static/media/arrow-upward.520ab45f.svg",
+    "static/media/bulb.ff1d7400.svg": "/static/media/bulb.ff1d7400.svg",
+    "static/media/check-circle_1.768e79f4.svg": "/static/media/check-circle_1.768e79f4.svg",
+    "static/media/cogs.83995fb5.svg": "/static/media/cogs.83995fb5.svg",
+    "static/media/download.448fc4da.svg": "/static/media/download.448fc4da.svg",
+    "static/media/exit.a7843b9d.svg": "/static/media/exit.a7843b9d.svg",
+    "static/media/idea.6e27fbfb.svg": "/static/media/idea.6e27fbfb.svg",
+    "static/media/like.d265f8a5.svg": "/static/media/like.d265f8a5.svg",
+    "static/media/logo.6ce24c58.svg": "/static/media/logo.6ce24c58.svg",
+    "static/media/newspaper.65ee0d1b.svg": "/static/media/newspaper.65ee0d1b.svg",
+    "static/media/people.03f9a39f.svg": "/static/media/people.03f9a39f.svg",
+    "static/media/star-full-outline.dd47a5d5.svg": "/static/media/star-full-outline.dd47a5d5.svg",
+    "static/media/star-outline.699e1c8f.svg": "/static/media/star-outline.699e1c8f.svg",
+    "static/media/trash.ba69b354.svg": "/static/media/trash.ba69b354.svg",
+    "static/media/user-admin.3c767ac4.svg": "/static/media/user-admin.3c767ac4.svg",
+    "static/media/user-circle_1.c126068b.svg": "/static/media/user-circle_1.c126068b.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.2f150c51.js",
+    "static/css/2.63596555.chunk.css",
+    "static/js/2.09135e4c.chunk.js",
+    "static/css/main.705e26c4.chunk.css",
+    "static/js/main.b6ca30c3.chunk.js"
+  ]
+}

@@ -15,26 +15,31 @@ module.exports = () => {
     left join idea_favorites favorites on favorites.idea_id = i.id
     group by i.id;
     `);
+    db.close();
     res.status(200).json(results);
   };
   controller.count = async (req, res) => {
     const db = require('../../db');
     let results = await db.query('select count(id) as count from ideas');
+    db.close();
     res.status(200).json(results);
   };
   controller.countByUser = async (req, res) => {
     const db = require('../../db');
     let results = await db.query('select count(i.id) as count from ideas i left join idea_favorites f on f.idea_id = i.id where (i.owner is not null or f.id is not null)');
+    db.close();
     res.status(200).json(results);
   };
   controller.countSaved = async (req, res) => {
     const db = require('../../db');
     let results = await db.query('select count(id) as count from idea_favorites;');
+    db.close();
     res.status(200).json(results);
   };
   controller.countOwner = async (req, res) => {
     const db = require('../../db');
     let results = await db.query('select count(id) as count from ideas  where owner is not null;');
+    db.close();
     res.status(200).json(results);
   };
 
@@ -52,6 +57,7 @@ module.exports = () => {
       where
         i.owner is null;
     `);
+    db.close();
     res.status(200).json(results);
   };
   
@@ -70,6 +76,7 @@ module.exports = () => {
         i.owner = ${req.params.userId}) and
         p.id is null;
     `);
+    db.close();
     res.status(200).json(results);
   };
   
@@ -95,6 +102,7 @@ module.exports = () => {
         await db.query(`update idea_likes il set il.like = 1 where id = ${results[0].id}`);
       }
     }
+    db.close();
     res.status(200).json({message: 'updated'});  
   };
   
@@ -122,6 +130,7 @@ module.exports = () => {
         await db.query(`update idea_likes il set il.like = 0 where id = ${results[0].id}`);
       }     
     }
+    db.close();
     res.status(200).json({message: 'updated'});  
   };
   
@@ -142,6 +151,7 @@ module.exports = () => {
     else {
       await db.query(`delete from idea_favorites where id = ${results[0].id}` );
     }
+    db.close();
     res.status(200).json({message: 'updated'});  
   };
 
@@ -153,6 +163,7 @@ module.exports = () => {
 
     const db = require('../../db');
     await db.query(`insert into ideas (${keys.join(', ')}) values ('${values.join("','")}')`);
+    db.close();
     res.status(200).json({message: 'inserted!'});
   }
   controller.delete = async (req, res) => {
@@ -160,6 +171,7 @@ module.exports = () => {
 
     const db = require('../../db');
     await db.query(`delete from ideas where id = ${id}`);
+    db.close();
     res.status(200).json({message: 'deleted!'});
   }
 

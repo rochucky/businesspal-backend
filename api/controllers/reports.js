@@ -6,6 +6,7 @@ module.exports = () => {
 
     const db = require('../../db');
     await db.query(`insert into report_requests values ('', '${setor}', '${name}', '${email}', '${description}')`);
+    db.close();
     res.status(200).json({message: 'inserted!'});
   }
 
